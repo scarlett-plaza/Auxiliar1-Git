@@ -11,5 +11,7 @@ class Usuario:
        for tarea in self.tareas:
            if tarea.estaLista():
                print(f"La tarea {tarea.obtenerNombre()} está lista")
-           else: <<<<<<< Elimina esta
+           else:
                print(f"La tarea {tarea.obtenerNombre()} no está lista")
+
+
