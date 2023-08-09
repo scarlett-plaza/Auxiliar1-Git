@@ -8,3 +8,6 @@ class Tarea:
 
     def estaLista(self):
         return self.listo
+    
+    def terminar(self):
+        self.listo = True
