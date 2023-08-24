@@ -49,7 +49,7 @@ Ahora, ambas personas deberán clonar el repositorio en sus computadoras siguien
 
 En este paso, cada integrante de la pareja hará un cambio en el proyecto, que no afectará el trabajo del otro y luego ambas personas descargarán los cambios.
 
-1. **Persona 🅰️** editará el archivo `clases/tarea.py`, agregando el siguiente método de clase:
+1. **Persona 🅰️** editará el archivo `tarea.py`, agregando el siguiente método de clase:
 ```python
 def terminar(self):
         self.listo = True
@@ -58,11 +58,11 @@ def terminar(self):
 2. **Persona 🅰️** actualizará el repositorio remoto. Desde la consola de Git se deberá "empujar" los cambios que se hicieron. Para ello, debe hacer lo siguiente en la consola de git (situandola en la carpeta raíz del repositorio).
 
     + `git status` para ver qué cambios se hicieron.
-    + `git add nombre-archivo` para agregar un archivo al commit. En este caso el archivo será clases/tarea.py 
+    + `git add nombre-archivo` para agregar un archivo al commit. En este caso el archivo será tarea.py 
     + `git commit -m "descripción del cambio que se hizo" ` para hacer commit de los cambios. 
     + `git push` para subir los cambios al repositorio remoto.  
 
-3. **Persona 🅱️**  editará el archivo `clases/usuario.py`, y agregará los siguientes métodos de clase:
+3. **Persona 🅱️**  editará el archivo `usuario.py`, y agregará los siguientes métodos de clase:
 
 ```python
 def listarTareas(self):
@@ -91,7 +91,7 @@ Persona B deberá hacer `git push` de nuevo para que sus cambios se suban al rep
 
 ¿Qué pasaría si persona B quiere quitarle el método listarTareas a la clase Usuario en `usuario.py` sin avisar y **Persona A decide moidificar la forma en que se muestran la lista de tareas?
 
-1. Persona B quitará la línea de código en `clases/usuario.py`
+1. Persona B quitará la línea de código en `usuario.py`
 
 ```python
 def listarTareas(self):
@@ -131,7 +131,7 @@ def listarTareas(self):
 
 Esto pasa cuando dos personas editan en mismo archivo del proyecto. Muchas veces Git puede solucionar estos conflictos automáticamente, pero otras veces la persona que realiza el push deberá decidir cuál será el código definitivo (luego de conversar con todo el equipo de desarrollo).
 
-5. Persona A verá que su archivo `clases/usuario.py está modificado y le agregaron algunas líneas. Lo primero que se ve es:
+5. Persona A verá que su archivo `usuario.py está modificado y le agregaron algunas líneas. Lo primero que se ve es:
 
 ```python
    <<<<<<< HEAD 
@@ -154,7 +154,7 @@ Por lo tanto, el código que aparecerá ahí será la versión del código de la
 
 7. Finalmente, Persona A deberá subir el resultado del merge. Para ello debe:
 
-     1. Volver a agregar los archivos modificados durante el merge haciendo `git add clases/usuario.py`.
+     1. Volver a agregar los archivos modificados durante el merge haciendo `git add usuario.py`.
      2. `git commit` para hacer commit del merge. Aquí no es necesario poner -m y el mensaje porque se está haciendo merge.
      3. `git push` para terminar de subir los cambios locales y el arreglo de los conflictos.
 
